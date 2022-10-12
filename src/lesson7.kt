@@ -4,6 +4,8 @@ package lesson7
 fun main() {
     ageDescription()
     minDivisor(15)
+    println(brickPasses(2, 3, 4, 4, 1))
+
 }
 
 fun ageDescription() {
@@ -34,5 +36,15 @@ fun minDivisor(n: Int){
         i++;
     }
     println("Наименьший делитель числа $n : $i")
+}
+fun brickPasses(a: Int, b: Int, c: Int, r: Int, s: Int): Boolean {
+    var result: Boolean = false
+    if (((a<=r) and (b<=s)) or ((b<=s) and (c<=r)) or ((c<=s) and (b<=r)) or ((a<=s) and (b<=r))
+    or ((a<=r) and (c<=s)) or ((a<=s) and (c<= r)))
+    {
+        result = true
+
+    }
+    return result
 }
 
